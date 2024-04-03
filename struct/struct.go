@@ -15,17 +15,17 @@ func main() {
 		Cidade: "São Paulo",
 	}
 	pessoa := encapsulamento.Pessoa{
-		Nome:     "Kendal",
-		Endereco: endereco,
+		Nome:             "Kendal",
+		Endereco:         endereco,
 		DataDeNascimento: time.Date(1997, 8, 30, 0, 0, 0, 0, time.Local),
 	}
 
 	fmt.Println(pessoa)
 	fmt.Println(endereco)
 	//idade := encapsulamento.CalculaIdade(pessoa)
-	idade := pessoa.IdadeAtual() // o método faz parte da struct de pessoa agora e é mais elegante 
-	fmt.Println(idade)
-	
+	pessoa.CalculaIdade() // o método faz parte da struct de pessoa agora e é mais elegante
+	fmt.Println(pessoa.Idade)
+
 	endereco.Numero = 18
 	fmt.Println(endereco.Numero)
 }
