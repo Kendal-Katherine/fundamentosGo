@@ -19,7 +19,6 @@ func main() {
 		Endereco:         endereco,
 		DataDeNascimento: time.Date(1997, 8, 30, 0, 0, 0, 0, time.Local),
 	}
-
 	fmt.Println(pessoa)
 	fmt.Println(endereco)
 	//idade := encapsulamento.CalculaIdade(pessoa)
@@ -28,4 +27,20 @@ func main() {
 
 	endereco.Numero = 18
 	fmt.Println(endereco.Numero)
+
+	/******************************************************************************/
+	automovelMoto := encapsulamento.Automovel{
+		Ano: 2022,
+		Placa: "XPTO",
+		Modelo: "CG",
+	}
+
+	moto := encapsulamento.Moto{
+		Automovel: automovelMoto,
+		Cilindradas: 125,
+	}
+	fmt.Println(moto)
+	fmt.Println(moto.Placa)
+
+	
 }
